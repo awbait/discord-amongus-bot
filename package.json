@@ -1,0 +1,27 @@
+{
+  "name": "amongus_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.mjs",
+  "scripts": {
+    "start": "node src/main.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "awbait",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "log4js": "^6.3.0",
+    "mongoose": "^5.10.8",
+    "mongoose-sequence": "^5.2.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
+  }
+}
