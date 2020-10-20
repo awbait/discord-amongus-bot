@@ -34,6 +34,9 @@ const gameSchema = new mongoose.Schema({
     required: true,
     default: 'ingame',
   },
+  result: {
+    type: String,
+  },
 }, {
   timestamps: {
     createdAt: 'created_at',

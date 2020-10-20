@@ -125,6 +125,15 @@ export const createPlayer = async (playerID, guildID, points, gamePlayed, gameWi
   }
 };
 
+export const checkPlayerInGame = async (playerID) => {
+  try {
+    const player = await Game.findOne({ members: playerID, status: 'ingame' });
+    return !!player;
+  } catch (error) {
+    logger.error(`REQUEST: checkPlayerInGame:: ${error}`);
+  }
+};
+
 export const findActiveGameByOwnerId = async (ownerID) => {
   try {
     const game = await Game.findOne({ owner_id: ownerID, status: 'ingame' });

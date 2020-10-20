@@ -54,10 +54,12 @@ client.login('NTE1NTEzMDE4MTEzNzIwMzMx.W_f66Q.3nShb3vsCMmtnKUXKAEHlHlo__8');
 
 async function InitServer() {
   database.init();
-  const guild = client.guilds.cache.get('758372773923258399');
+  const game = await database.checkPlayerInGame('696138838967320626');
+  logger.info(game);
+  // const guild = client.guilds.cache.get('758372773923258399');
 
-  const game = await database.findActiveGameByOwnerId('177001826321825792');
-  console.log(game.members.length);
+  // const game = await database.findActiveGameByOwnerId('177001826321825792');
+  // console.log(game.members.length);
 
 }
 
